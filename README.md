@@ -1,2 +1,0 @@
-# techUI
-For test grid
