@@ -11,9 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
 
-/**
- * Created by sungaofei on 19/2/28.
- */
+
 public class TechTest {
 
     @Test
@@ -22,14 +20,14 @@ public class TechTest {
         Configuration.screenshots = false;
         webdriverContainer.clearBrowserCache();
 //
-        Configuration.browser="firefox";
+        Configuration.browser="chrome";
         Configuration.remote = "http://192.168.1.27:5001/wd/hub";
 
-        String baseUrl = "https://www.baidu.com/";
+        String baseUrl = "https://testerhome.com/";
 
         com.codeborne.selenide.Selenide.open(baseUrl);
 
-        $(byText("搜索一下")).should(Condition.visible);
+        $(byText("Wiki")).should(Condition.visible);
 
 
         System.out.print("pass");
